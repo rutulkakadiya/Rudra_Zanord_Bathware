@@ -87,8 +87,8 @@ export default function About() {
                                 <div className="w-8 h-1 bg-[var(--brand-color)]/50 rounded-full" />
                             </div>
 
-                            <h3 className="heading-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-4 leading-tight hover:text-[var(--brand-color)] transition-colors duration-300" data-aos="fade-left" data-aos-duration="1500">
-                                Our Story - Zanord Bath Accessories
+                            <h3 className="heading-text font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-4 leading-tight transition-colors duration-300" data-aos="fade-left" data-aos-duration="1500">
+                                Our Story - <span className='heading-text text-[var(--brand-color)]'>Zanord</span> Bath Accessories
                             </h3>
                         </div>
 
@@ -128,6 +128,7 @@ export default function About() {
                                     </svg>
                                 </span>
                             </button>
+
 
                             <button className="px-6 py-4 sm:px-8 sm:py-4 font-bold text-[var(--brand-color)] border-2 border-[var(--brand-color)] rounded-2xl hover:bg-[var(--brand-color)] hover:text-white transition-all duration-500 hover:scale-105 hover:shadow-lg group text-sm sm:text-base">
                                 <span className="flex items-center justify-center gap-3">
