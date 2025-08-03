@@ -101,7 +101,7 @@ export default function Footer() {
                                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-full transition-all duration-500"></div>
                             </h3>
                             <div className="space-y-4">
-                                {[{ icon: Phone, text: '+91 98765 43210' },
+                                {[{ icon: Phone, text: '+91 12345 67890' },
                                   { icon: Mail, text: 'zanordbath@gmail.com' },
                                   { icon: MapPin, text: 'Rajkot, Gujarat' }].map((item, index) => (
                                     <div key={index} className="flex items-center space-x-3 group/item transform transition-all duration-300 hover:translate-x-2">
@@ -173,7 +173,7 @@ export default function Footer() {
                                 <p className="transform transition-all duration-300 hover:text-white">
                                     Developed and Designed By{' '}
                                     <span className="text-[#FDCB2E] font-semibold hover:text-yellow-300 transition-colors duration-300 cursor-pointer">
-                                        Rudra Branding
+                                        <a target='_blank' href="https://www.rudrabranding.com">Rudra Branding</a>
                                     </span>
                                 </p>
                             </div>
