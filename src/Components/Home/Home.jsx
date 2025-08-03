@@ -16,8 +16,8 @@ export default function Home() {
         <Slider/>
         <About/>
         <ProductIntro/>
-        <Category/>
         <Products/>
+        <Category/>
         <Footer/>
     </div>
   )
