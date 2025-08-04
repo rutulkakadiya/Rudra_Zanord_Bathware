@@ -154,7 +154,7 @@ const ContactUs = () => {
                 <div className="absolute top-20 sm:top-40 right-5 sm:right-20 w-10 h-10 sm:w-16 sm:h-16 bg-black rounded-full opacity-10 animate-pulse hidden sm:block"></div>
                 <div className="absolute bottom-20 sm:bottom-40 left-5 sm:left-20 w-8 h-8 sm:w-12 sm:h-12 bg-[var(--brand-color)] rounded-full opacity-30 animate-ping hidden sm:block"></div>
 
-                <div className="container mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
+                <div className="container px-4 mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
                     <div className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000`} data-aos="fade-up" data-aos-duration="1500">
                         <div className="flex items-center justify-center mb-4 sm:mb-6">
                             <Sparkles className="text-[var(--brand-color)] w-6 h-6 sm:w-8 sm:h-8 mr-2 animate-spin" />
@@ -261,7 +261,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
+            <div className="container px-4 mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 w-full mx-auto">
                     <div className={`transition-all lg:col-span-4`} data-aos="fade-right" data-aos-duration="1500">
                         <div className="space-y-6">
