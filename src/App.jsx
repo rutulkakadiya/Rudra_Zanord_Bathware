@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ContactUs from './Components/Contact Us/ContactUs';
 import EBrochure from './Components/E-Brochure/E-Brochure';
+import Gallery from './Components/Gallery/Gallery';
+import CompanyProfile from './Components/Company Profile/CompanyProfile';
 
 export default function App() {
   useEffect(() => {
@@ -18,8 +20,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path='/companyProfile' element={<CompanyProfile />}></Route>
           <Route path='/contactUs' element={<ContactUs />}></Route>
           <Route path='/e-brochure' element={<EBrochure />}></Route>
+          <Route path='/gallery' element={<Gallery />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

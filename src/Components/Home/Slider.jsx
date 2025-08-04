@@ -44,17 +44,6 @@ export default function Slider() {
 
     return (
         <div className="relative overflow-hidden bg-black">
-
-            {/* Loading Screen */}
-            {isLoading && (
-                <div className="absolute inset-0 bg-black z-50 flex items-center justify-center">
-                    <div className="text-center">
-                        <div className="w-16 h-16 border-4 border-[var(--brand-color)] border-t-transparent rounded-full animate-spin mb-4"></div>
-                        <p className="text-[var(--brand-color)] text-lg font-semibold">Loading Experience...</p>
-                    </div>
-                </div>
-            )}
-
             {/* Floating Particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 {[...Array(15)].map((_, i) => (

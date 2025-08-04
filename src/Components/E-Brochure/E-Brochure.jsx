@@ -23,12 +23,6 @@ const ZanordEBrochure = () => {
     setIsVisible(true);
   }, []);
 
-  const brochureFormats = [
-    { id: 'pdf', name: 'PDF Format', size: '2.4 MB', icon: '📄', description: 'High quality PDF for printing' },
-    { id: 'digital', name: 'Digital Flipbook', size: '1.8 MB', icon: '📱', description: 'Interactive digital version' },
-    { id: 'ppt', name: 'PowerPoint', size: '3.2 MB', icon: '📊', description: 'Editable presentation format' },
-    { id: 'catalog', name: 'Product Catalog', size: '4.1 MB', icon: '📚', description: 'Complete product catalog' }
-  ];
 
   const features = [
     { icon: <FileText className="w-5 h-5 sm:w-6 sm:h-6" />, title: "20+ Pages", description: "Comprehensive product showcase" },
