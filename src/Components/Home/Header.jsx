@@ -7,12 +7,37 @@ export default function Header() {
     const [language, setLanguage] = useState('en');
 
     const navigationItems = [
-        'Home',
-        'Company Profile',
-        'Products',
-        'Gallery',
-        'E-Brochure',
-        'Contact Us'
+        {
+            id: 1,
+            link: "/",
+            pageName: 'Home'
+        },
+        {
+            id: 2,
+            link: "/companyProfile",
+            pageName: 'Company Profile'
+        },
+        {
+            id: 3,
+            link: "/products",
+            pageName: 'Products'
+        },
+        {
+            id: 4,
+            link: "/gallery",
+            pageName: 'Gallery'
+        },
+        {
+            id: 5,
+            link: "/e-brochure",
+            pageName: 'E-Brochure'
+        },
+        {
+            id: 6,
+            link: "/contactUs",
+            pageName: 'Contact Us'
+        },
+
     ];
 
     const handleChange = (e) => setLanguage(e.target.value);
@@ -30,7 +55,7 @@ export default function Header() {
             </div>
 
             {/* Contact bar */}
-            <div className="bg-[var(--brand-color)] text-black py-2 px-4 relative z-10 text-sm">
+            <div className="bg-[var(--brand-color)] hidden sm:block text-black py-2 px-4 relative z-10 text-sm">
                 <div className="w-[90%] mx-auto flex justify-between items-center">
                     <div className="flex items-center gap-4">
                         <Phone size={14} />
@@ -44,7 +69,7 @@ export default function Header() {
             </div>
 
             {/* Main header */}
-            <div className="w-[90%] mx-auto px-4 py-5 relative z-10 flex justify-between items-center">
+            <div className="w-[95%] sm:w-[90%] mx-auto px-4 py-5 relative z-10 flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center gap-3">
                     <img className="h-[50px]" src="/logo.png" alt="Logo" />
@@ -56,10 +81,10 @@ export default function Header() {
                         {navigationItems.map((item, index) => (
                             <li key={index}>
                                 <a
-                                    href="#"
+                                    href={item.link}
                                     className="font-medium text-black hover:text-[var(--brand-color)] transition relative group"
                                 >
-                                    {item}
+                                    {item.pageName}
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--brand-color)] group-hover:w-full transition-all duration-300"></span>
                                 </a>
                             </li>
@@ -73,7 +98,7 @@ export default function Header() {
                     <select
                         value={language}
                         onChange={handleChange}
-                        className="px-4 py-2 rounded-lg bg-black text-white border border-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-color)] focus:border-transparent transition-all duration-200 ease-in-out hover:border-white text-sm sm:text-base"
+                        className="px-4 py-2 hidden sm:block rounded-lg bg-black text-white border border-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-color)] focus:border-transparent transition-all duration-200 ease-in-out hover:border-white text-sm sm:text-base"
                     >
                         <option value="en">English</option>
                         <option value="hi">Hindi</option>
@@ -99,11 +124,11 @@ export default function Header() {
                         {navigationItems.map((item, index) => (
                             <li key={index}>
                                 <a
-                                    href="#"
+                                    href={item.link}
                                     onClick={() => setIsMenuOpen(false)}
                                     className="block text-black font-medium hover:text-[var(--brand-color)]"
                                 >
-                                    {item}
+                                    {item.pageName}
                                 </a>
                             </li>
                         ))}

@@ -84,7 +84,7 @@ export default function Category() {
                 <div className="absolute bottom-32 left-32 w-6 h-6 bg-[var(--brand-color)]/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
             </div>
 
-            <div className="w-[90%] mx-auto relative z-10">
+            <div className="w-[95%] sm:w-[90%] mx-auto relative z-10">
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Enhanced Text Content */}

@@ -10,15 +10,15 @@ import Whatsapp from '../Whatsapp'
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Whatsapp/>
-        <Header/>
-        <Slider/>
-        <About/>
-        <ProductIntro/>
-        <Products/>
-        <Category/>
-        <Footer/>
+    <div>
+      <Whatsapp />
+      <Header />
+      <Slider />
+      <About />
+      <ProductIntro />
+      <Products />
+      <Category />
+      <Footer />
     </div>
   )
 }

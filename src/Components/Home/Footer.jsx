@@ -96,7 +96,7 @@ export default function Footer() {
 
                         {/* Address Section */}
                         <div className="group">
-                            <h3 className="text-lg font-semibold mb-6 text-[#FDCB2E] relative inline-block">
+                            <h3 className="heading-text text-lg font-semibold mb-6 text-[#FDCB2E] relative inline-block">
                                 Address
                                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-full transition-all duration-500"></div>
                             </h3>
@@ -118,7 +118,7 @@ export default function Footer() {
 
                         {/* Quick Links */}
                         <div className="group">
-                            <h3 className="text-lg font-semibold mb-6 text-[#FDCB2E] relative inline-block">
+                            <h3 className="heading-text text-lg font-semibold mb-6 text-[#FDCB2E] relative inline-block">
                                 Quick Links
                                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-full transition-all duration-500"></div>
                             </h3>
@@ -139,7 +139,7 @@ export default function Footer() {
 
                         {/* Follow Us */}
                         <div className="group">
-                            <h3 className="text-lg font-semibold mb-6 text-[#FDCB2E] relative inline-block">
+                            <h3 className="heading-text text-lg font-semibold mb-6 text-[#FDCB2E] relative inline-block">
                                 Follow Us
                                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-full transition-all duration-500"></div>
                             </h3>
