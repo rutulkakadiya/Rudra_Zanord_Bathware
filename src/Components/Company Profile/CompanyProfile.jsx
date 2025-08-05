@@ -193,7 +193,7 @@ const CompanyProfile = () => {
 
       {/* Enhanced Our Story Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 overflow-hidden">
-        <div className="w-[95%] sm:w-[90%] border mx-auto">
+        <div className="w-[95%] sm:w-[90%] mx-auto">
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 items-center">
             {/* Left Content */}
             <div className="group/content">
