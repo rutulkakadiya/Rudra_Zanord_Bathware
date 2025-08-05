@@ -9,8 +9,6 @@ const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
-    const [viewMode, setViewMode] = useState('grid');
-    const [likedImages, setLikedImages] = useState(new Set());
     const [isLoading, setIsLoading] = useState(true);
 
     // Sample gallery data - replace with your actual images
@@ -78,18 +76,6 @@ const Gallery = () => {
         const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
         setCurrentIndex(prevIndex);
         setSelectedImage(galleryImages[prevIndex]);
-    };
-
-    const toggleLike = (imageId) => {
-        setLikedImages(prev => {
-            const newLiked = new Set(prev);
-            if (newLiked.has(imageId)) {
-                newLiked.delete(imageId);
-            } else {
-                newLiked.add(imageId);
-            }
-            return newLiked;
-        });
     };
 
     const FloatingElement = ({ delay, size, position }) => (

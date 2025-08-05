@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Phone, Mail } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [language, setLanguage] = useState('en');
+
+    const location = useLocation();
+
 
     const navigationItems = [
         {
@@ -78,18 +82,31 @@ export default function Header() {
                 {/* Navigation (desktop) */}
                 <nav className="hidden md:block">
                     <ul className="flex gap-6">
-                        {navigationItems.map((item, index) => (
-                            <li key={index}>
-                                <a
-                                    href={item.link}
-                                    className="font-medium text-black hover:text-[var(--brand-color)] transition relative group"
-                                >
-                                    {item.pageName}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--brand-color)] group-hover:w-full transition-all duration-300"></span>
-                                </a>
-                            </li>
-                        ))}
+                        {navigationItems.map((item, index) => {
+                            const isActive = location.pathname === item.link;
+
+                            return (
+                                <li key={index} className="relative group">
+                                    <a
+                                        href={item.link}
+                                        className={`block font-medium pb-1 transition-all duration-300 ${isActive
+                                                ? 'text-[var(--brand-color)] scale-105 font-semibold'
+                                                : 'text-black hover:text-[var(--brand-color)]'
+                                            }`}
+                                    >
+                                        {item.pageName}
+
+                                        {/* Animated underline for active link */}
+                                        <span
+                                            className={`absolute bottom-0 left-0 h-0.5 bg-[var(--brand-color)] transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                                }`}
+                                        ></span>
+                                    </a>
+                                </li>
+                            );
+                        })}
                     </ul>
+
                 </nav>
 
                 {/* Actions */}
@@ -103,7 +120,6 @@ export default function Header() {
                         <option value="en">English</option>
                         <option value="hi">Hindi</option>
                         <option value="gu">Gujarati</option>
-                        <option value="fr">French</option>
                     </select>
 
 

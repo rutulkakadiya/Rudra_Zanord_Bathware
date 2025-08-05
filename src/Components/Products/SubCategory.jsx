@@ -1,226 +1,176 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../Home/Header';
 import Whatsapp from '../Whatsapp';
-import { ChevronLeft, ChevronRight, Eye, Sparkles, Star, X } from 'lucide-react';
+import { Eye, Sparkles, Star } from 'lucide-react';
 
-export default function Products() {
+export default function SubCategory() {
     // Get the category from the URL
-    const { category, subCategory } = useParams();
-    const [selectedImage, setSelectedImage] = useState(null);
+    const { category } = useParams();
 
     const products = [
         {
             id: 1,
-            image: "/ovel_chrome_napkin_ring.jpg",
-            product_code: "OC-304",
-            name: "Napkin Ring",
-            // price: "₹ 790/-",
+            name: "Ovel Chrome",
             category: "ovel",
             subCategory: "ovel_chrome",
+            image: "/ovel_chrome.jpg",
         },
         {
             id: 2,
-            image: "/ovel_pvdgold_napkin_ring.jpg",
-            product_code: "OG-304",
-            name: "Napkin Ring",
-            // price: "₹ 1206/-",
+            name: "Ovel PVD Gold",
             category: "ovel",
             subCategory: "ovel_pvdgold",
+            image: "/ovel_pvdgold.jpg",
         },
         {
             id: 3,
-            image: "/ovel_pvdrosegold_napkin_ring.jpg",
-            product_code: "OR-304",
-            name: "Napkin Ring",
-            // price: "₹ 1206/-",
+            name: "Ovel PVD Rose Gold",
             category: "ovel",
             subCategory: "ovel_pvdrosegold",
+            image: "/ovel_pvdrosegold.jpg",
         },
         {
             id: 4,
-            image: "/ovel_pvd_black_matt_napkin_ring.jpg",
-            product_code: "OB-304",
-            name: "Napkin Ring",
-            // price: "₹ 1750/-",
+            name: "Ovel PVD Black Matt",
             category: "ovel",
             subCategory: "ovel_pvd_black_matt",
+            image: "/ovel_pvd_black_matt.jpg",
         },
         {
             id: 5,
-            image: "/ovel_black_gold_napkin_ring.jpg",
-            product_code: "OBG-304",
-            name: "Napkin Ring",
-            // price: "₹ 1290/-",
+            name: "Ovel PVD Black Gold",
             category: "ovel",
             subCategory: "ovel_black_gold",
+            image: "/ovel_black_gold.jpg",
         },
         {
             id: 6,
-            image: "/ovel_black_rg_napkin_ring.jpg",
-            product_code: "OBR-304",
-            name: "Napkin Ring",
-            // price: "₹ 1290/-",
+            name: "Ovel PVD Black Rose Gold",
             category: "ovel",
             subCategory: "ovel_black_rg",
+            image: "/ovel_black_rg.jpg",
         },
-
-
         {
             id: 7,
-            image: "/square_chrome_napkin_ring.jpg",
-            product_code: "SC-404",
-            name: "Napkin Ring",
-            // price: "₹ 840/-",
+            name: "Square Chrome",
             category: "square",
             subCategory: "square_chrome",
+            image: "/square_chrome.jpg",
+            badge: "Best Seller",
         },
         {
             id: 8,
-            image: "/square_pvdgold_napkin_ring.jpg",
-            product_code: "SG-404",
-            name: "Napkin Ring",
-            // price: "₹ 1256/-",
+            name: "Square PVD Gold",
             category: "square",
             subCategory: "square_pvdgold",
+            image: "/square_pvdgold.jpg",
+            badge: "New",
         },
         {
             id: 9,
-            image: "/square_pvdrosegold_napkin_ring.jpg",
-            product_code: "SR-404",
-            name: "Napkin Ring",
-            // price: "₹ 1256/-",
+            name: "Square PVD Rose Gold",
             category: "square",
             subCategory: "square_pvdrosegold",
+            image: "/square_pvdrosegold.jpg",
         },
         {
             id: 10,
-            image: "/square_pvd_black_matt_napkin_ring.jpg",
-            product_code: "SB-404",
-            name: "Napkin Ring",
-            // price: "₹ 1800/-",
+            name: "Square PVD Black Matt",
             category: "square",
             subCategory: "square_pvd_black_matt",
+            image: "/square_pvd_black_matt.jpg",
         },
         {
             id: 11,
-            image: "/square_black_gold_napkin_ring.jpg",
-            product_code: "SBG-404",
-            name: "Napkin Ring",
-            // price: "₹ 1340/-",
+            name: "Square PVD Black Gold",
             category: "square",
             subCategory: "square_black_gold",
+            image: "/square_black_gold.jpg",
         },
         {
             id: 12,
-            image: "/square_black_rg_napkin_ring.jpg",
-            product_code: "SBR-404",
-            name: "Napkin Ring",
-            // price: "₹ 1340/-",
+            name: "Square PVD Black Rose Gold",
             category: "square",
             subCategory: "square_black_rg",
+            image: "/square_black_rg.jpg",
+            badge: "Smart",
         },
-
-
         {
             id: 13,
-            image: "/aristo_chrome_napkin_ring.jpg",
-            product_code: "AC-504",
-            name: "Napkin Ring",
-            // price: "₹ 840/-",
+            name: "Aristo Chrome",
             category: "aristo",
             subCategory: "aristo_chrome",
+            image: "/aristo_chrome.jpg",
         },
         {
             id: 14,
-            image: "/aristo_pvdgold_napkin_ring.jpg",
-            product_code: "AG-504",
-            name: "Napkin Ring",
-            // price: "₹ 1256/-",
+            name: "Aristo PVD Gold",
             category: "aristo",
             subCategory: "aristo_pvdgold",
+            image: "/aristo_pvdgold.jpg",
         },
         {
             id: 15,
-            image: "/aristo_pvdrosegold_napkin_ring.jpg",
-            product_code: "AR-504",
-            name: "Napkin Ring",
-            // price: "₹ 1256/-",
+            name: "Aristo PVD Rose Gold",
             category: "aristo",
             subCategory: "aristo_pvdrosegold",
+            image: "/aristo_pvdrosegold.jpg",
         },
         {
             id: 16,
-            image: "/aristo_pvd_black_matt_napkin_ring.jpg",
-            product_code: "AB-504",
-            name: "Napkin Ring",
-            // price: "₹ 1800/-",
+            name: "Aristo PVD Black Matt",
             category: "aristo",
             subCategory: "aristo_pvd_black_matt",
+            image: "/aristo_pvd_black_matt.jpg",
         },
         {
             id: 17,
-            image: "/aristo_black_gold_napkin_ring.jpg",
-            product_code: "ABG-504",
-            name: "Napkin Ring",
-            // price: "₹ 1340/-",
+            name: "Aristo PVD Black Gold",
             category: "aristo",
             subCategory: "aristo_black_gold",
+            image: "/aristo_black_gold.jpg",
         },
         {
             id: 18,
-            image: "/aristo_black_rg_napkin_ring.jpg",
-            product_code: "ABR-504",
-            name: "Napkin Ring",
-            // price: "₹ 1340/-",
+            name: "Aristo PVD Black Rose Gold",
             category: "aristo",
             subCategory: "aristo_black_rg",
+            image: "/aristo_black_rg.jpg",
         },
-
-
-
-
         {
             id: 19,
-            image: "/shelf_corner_chrome.jpg",
-            product_code: "ZSC-03",
-            name: "Shelf & Corner",
-            // price: "₹ 957/-",
+            name: "Shelf Corner Chrome",
             category: "shelf_corner",
             subCategory: "shelf_corner_chrome",
+            image: "/shelf_corner_chrome.jpg",
         },
         {
             id: 20,
-            image: "/shelf_corner_gold.jpg",
-            product_code: "ZSC-17",
-            name: "Shelf & Corner",
-            // price: "₹ 2454/-",
+            name: "Shelf Corner Gold",
             category: "shelf_corner",
             subCategory: "shelf_corner_gold",
+            image: "/shelf_corner_gold.jpg",
         },
         {
             id: 21,
-            image: "/shelf_corner_black.jpg",
-            product_code: "ZSC-21",
-            name: "Shelf & Corner",
-            // price: "₹ 1514/-",
+            name: "Shelf Corner Rose Gold",
             category: "shelf_corner",
-            subCategory: "shelf_corner_black",
+            subCategory: "shelf_corner_rosegold",
+            image: "/shelf_corner_rosegold.jpg",
         },
         {
             id: 22,
-            image: "/shelf_corner_rosegold.jpg",
-            product_code: "ZSC-19",
-            name: "Shelf & Corner",
-            // price: "₹ 2454/-",
+            name: "Shelf Corner Black",
             category: "shelf_corner",
-            subCategory: "shelf_corner_rosegold",
+            subCategory: "shelf_corner_black",
+            image: "/shelf_corner_black.jpg",
         },
     ];
 
     // Filter products based on the category from URL
     const filteredProducts = products.filter(
-        (product) => product.subCategory === subCategory
+        (product) => product.category === category
     );
 
     const FloatingElement = ({ delay, size, position }) => (
@@ -255,42 +205,6 @@ export default function Products() {
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
     };
-
-    const formatSubcategory = (subcategory) => {
-        // Replace underscores with hyphens for consistent splitting
-        let cleaned = subcategory.replace(/_/g, '-');
-
-        // Correct common typos
-        cleaned = cleaned.replace(/balck/gi, 'black').replace(/matt/gi, 'matte');
-
-        // Split by hyphen, capitalize each word, and join with spaces
-        return cleaned
-            .split('-')
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-            .join(' ');
-    };
-
-    const openModal = (image, index) => {
-        setSelectedImage(image);
-        setCurrentIndex(index);
-    };
-
-    const closeModal = () => {
-        setSelectedImage(null);
-    };
-
-    const nextImage = () => {
-        const nextIndex = (currentIndex + 1) % galleryImages.length;
-        setCurrentIndex(nextIndex);
-        setSelectedImage(galleryImages[nextIndex]);
-    };
-
-    const prevImage = () => {
-        const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        setCurrentIndex(prevIndex);
-        setSelectedImage(galleryImages[prevIndex]);
-    };
-
 
     return (
         <div>
@@ -342,37 +256,18 @@ export default function Products() {
                         <span>/</span>
                         <Link to="/products">Products</Link>
                         <span>/</span>
-                        <Link to={`/products/${category}`}>{formatCategory(category)} Collection</Link>
-                        <span>/</span>
-                        <span className="text-black font-semibold">{formatSubcategory(subCategory)}</span>
+                        <span className="text-black font-semibold">{formatCategory(category)}</span>
                     </div>
 
                     {/* Main Title */}
                     <div className="relative inline-block">
                         <h1 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black mb-4 sm:mb-6 transform translate-y-8" style={{ animationDelay: '200ms' }}>
-                            {
-                                (() => {
-                                    const words = formatSubcategory(subCategory).split(' ');
-                                    const firstWord = words.shift(); // remove and store first word
-                                    const remainingWords = words.join(' ');
-                                    return (
-                                        <>
-                                            {firstWord}{' '}
-                                            <span className="heading-text text-[var(--brand-color)]">
-                                                {remainingWords}
-                                            </span>
-                                        </>
-                                    );
-                                })()
-                            }
+                            {formatCategory(category)} {' '}
                             <span className="heading-text relative bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] bg-clip-text text-transparent">
-                                <div
-                                    className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] transform scale-x-0 animate-pulse"
-                                    style={{ animation: 'scaleX 2s ease-in-out infinite' }}
-                                ></div>
+                                Collection
+                                <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] transform scale-x-0 animate-pulse" style={{ animation: 'scaleX 2s ease-in-out infinite' }}></div>
                             </span>
                         </h1>
-
 
                         {/* Floating sparkles */}
                         <div className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4">
@@ -412,7 +307,6 @@ export default function Products() {
                             <div
                                 key={`${product.category}-${product.id}`}
                                 className={`group cursor-pointer transform transition-all duration-700`}
-                                onClick={() => openModal(product, index)}
                                 style={{
                                     transitionDelay: `${index * 150}ms`,
                                 }}
@@ -451,12 +345,14 @@ export default function Products() {
 
                                         {/* Enhanced Quick View Overlay */}
                                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/20">
-                                            <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-semibold transform translate-y-6 scale-90 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-500 hover:bg-[#FDCB2E] hover:text-white shadow-lg hover:shadow-xl">
-                                                <span className="flex items-center gap-2">
-                                                    <Eye size={16} />
-                                                    View Products
-                                                </span>
-                                            </button>
+                                            <Link to={`/products/${product.category}/${product.subCategory}`}>
+                                                <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-semibold transform translate-y-6 scale-90 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-500 hover:bg-[#FDCB2E] hover:text-white shadow-lg hover:shadow-xl">
+                                                    <span className="flex items-center gap-2">
+                                                        <Eye size={16} />
+                                                        View Products
+                                                    </span>
+                                                </button>
+                                                </Link>
                                         </div>
 
                                         {/* Enhanced Shine Effect */}
@@ -464,31 +360,26 @@ export default function Products() {
                                     </div>
 
                                     {/* Enhanced Product Info */}
-                                    <div className="p-3 space-y-3 text-center relative bg-gradient-to-b from-white to-gray-50/50">
+                                    <div className="p-6 space-y-3 text-center relative bg-gradient-to-b from-white to-gray-50/50">
                                         {/* Animated Border with Pulse */}
                                         <div className="absolute top-0 left-1/2 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-16 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-500 shadow-lg"></div>
                                         <div className="absolute top-0 left-1/2 w-0 h-0.5 bg-white opacity-75 group-hover:w-16 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-700 animate-pulse"></div>
 
-                                        <h3 className="text-[16px] sm:text-[18px] text-black transition-all duration-300 group-hover:text-[#FDCB2E] transform group-hover:scale-105 group-hover:-translate-y-1">
-                                            {product.product_code}
-                                        </h3>
                                         <h3 className="heading-text font-bold text-2xl text-black transition-all duration-300 group-hover:text-[#FDCB2E] transform group-hover:scale-105 group-hover:-translate-y-1">
                                             {product.name}
                                         </h3>
 
-                                        {/* <h3 className="font-bold text-[16px] sm:text-[18px] text-black transition-all duration-300 group-hover:text-[#FDCB2E] transform group-hover:scale-105 group-hover:-translate-y-1">
-                                            {product.price}
-                                        </h3> */}
-
-                                        <button
-                                            className="block sm:hidden relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
-                                        >
-                                            <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black text-white z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
-                                            <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
-                                                <Eye size={16} />
-                                                View Products
-                                            </span>
-                                        </button>
+                                        <Link to={`/products/${product.category}/${product.subCategory}`}>
+                                            <button
+                                                className="block sm:hidden relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
+                                            >
+                                                <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black text-white z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
+                                                <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+                                                    <Eye size={16} />
+                                                    View Products
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
 
                                     {/* Corner Glow Effect */}
@@ -504,46 +395,6 @@ export default function Products() {
                     )}
                 </div>
             </div>
-
-            {selectedImage && (
-                <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-                    {/* Close Button */}
-                    <button
-                        onClick={closeModal}
-                        className="absolute top-4 right-4 z-60 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                    >
-                        <X className="w-6 h-6" />
-                    </button>
-
-                    {/* Navigation Buttons */}
-                    <button
-                        onClick={prevImage}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 z-60 p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                    >
-                        <ChevronLeft className="w-6 h-6" />
-                    </button>
-                    <button
-                        onClick={nextImage}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 z-60 p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                    >
-                        <ChevronRight className="w-6 h-6" />
-                    </button>
-
-                    {/* Modal Content */}
-                    <div className="max-w-4xl max-h-[90vh] w-full">
-                        <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
-                            <div className="w-full bg-gray-100">
-                                <img
-                                    src={selectedImage.image}
-                                    alt={selectedImage.title}
-                                    className="w-full h-full object-contain"
-                                />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            )}
 
             <style jsx>{`
         @keyframes slideInFromTop {
