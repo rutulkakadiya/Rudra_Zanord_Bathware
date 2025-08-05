@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Phone, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
+import LanguageSelector from '../../../LanguageSelector';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ export default function Header() {
     const handleChange = (e) => setLanguage(e.target.value);
 
     return (
-        <header className="shadow-2xl relative overflow-hidden font-sans">
+        <header className="shadow-2xl relative font-sans">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div
@@ -112,21 +113,13 @@ export default function Header() {
                 {/* Actions */}
                 <div className="flex items-center gap-4">
                     {/* Language selector */}
-                    <select
-                        value={language}
-                        onChange={handleChange}
-                        className="px-4 py-2 hidden sm:block rounded-lg bg-black text-white border border-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-color)] focus:border-transparent transition-all duration-200 ease-in-out hover:border-white text-sm sm:text-base"
-                    >
-                        <option value="en">English</option>
-                        <option value="hi">Hindi</option>
-                        <option value="gu">Gujarati</option>
-                    </select>
-
+                    
+                        <LanguageSelector/>
 
                     {/* Mobile menu toggle */}
                     <button
                         className="md:hidden text-black"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}  
                     >
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
