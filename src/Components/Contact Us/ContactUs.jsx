@@ -51,8 +51,8 @@ const ContactUs = () => {
         {
             icon: MapPin,
             title: 'Address',
-            info: 'Rajkot',
-            subInfo: 'Gujarat'
+            info: '2, New Balaji Ind. Area, Plot No. 25, Survey No 172/3, Atlas Park, Varun Metacraft Maldhari Fatak, Road, Kotharia, Gujarat 360022',
+            // subInfo: 'Gujarat'
         },
         {
             icon: Clock,
@@ -125,7 +125,7 @@ const ContactUs = () => {
                     <span className="text-black font-medium">Contact Us</span>
                 </div>
 
-                <h1 className="heading-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 sm:mb-6 relative" data-aos="fade-up" data-aos-duration="1500">
+                <h1 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6 relative" data-aos="fade-up" data-aos-duration="1500">
                     Contact <span className='heading-text text-[var(--brand-color)]'>Us</span>
                     <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4">
                         <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--brand-color)] animate-pulse" />
@@ -154,7 +154,7 @@ const ContactUs = () => {
                 <div className="absolute top-20 sm:top-40 right-5 sm:right-20 w-10 h-10 sm:w-16 sm:h-16 bg-black rounded-full opacity-10 animate-pulse hidden sm:block"></div>
                 <div className="absolute bottom-20 sm:bottom-40 left-5 sm:left-20 w-8 h-8 sm:w-12 sm:h-12 bg-[var(--brand-color)] rounded-full opacity-30 animate-ping hidden sm:block"></div>
 
-                <div className="container px-4 mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
+                <div className="px-4 py-8 sm:py-12 mx-auto w-[95%] sm:w-[90%]">
                     <div className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000`} data-aos="fade-up" data-aos-duration="1500">
                         <div className="flex items-center justify-center mb-4 sm:mb-6">
                             <Sparkles className="text-[var(--brand-color)] w-6 h-6 sm:w-8 sm:h-8 mr-2 animate-spin" />
@@ -170,7 +170,7 @@ const ContactUs = () => {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 w-full mx-auto">
-                        <div className={`transition-all duration-1000 delay-300`}>
+                        <div className={`transition-all duration-1000 delay-300 order-2 lg:order-1`}>
                             <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-3xl transition-all duration-300">
                                 <div className="flex items-center mb-6 sm:mb-8" data-aos="fade-right" data-aos-duration="1500">
                                     <div className="bg-[var(--brand-color)] p-2 sm:p-3 rounded-full mr-3 sm:mr-4">
@@ -189,7 +189,7 @@ const ContactUs = () => {
                                 )}
 
                                 <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6" data-aos="fade-right" data-aos-duration="1500">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6" data-aos="fade-right" data-aos-duration="1000">
                                         <div className="group">
                                             <label className="block text-black font-medium mb-2 text-sm sm:text-base">Full Name</label>
                                             <input
@@ -202,7 +202,7 @@ const ContactUs = () => {
                                                 placeholder="Enter your name"
                                             />
                                         </div>
-                                        <div className="group" data-aos="fade-right" data-aos-duration="1500">
+                                        <div className="group">
                                             <label className="block text-black font-medium mb-2 text-sm sm:text-base">Phone Number</label>
                                             <input
                                                 type="tel"
@@ -216,7 +216,7 @@ const ContactUs = () => {
                                         </div>
                                     </div>
 
-                                    <div className="group" data-aos="fade-right" data-aos-duration="1500">
+                                    <div className="group" data-aos="fade-right" data-aos-duration="1000">
                                         <label className="block text-black font-medium mb-2 text-sm sm:text-base">Email Address</label>
                                         <input
                                             type="email"
@@ -229,7 +229,7 @@ const ContactUs = () => {
                                         />
                                     </div>
 
-                                    <div className="group" data-aos="fade-right" data-aos-duration="1500">
+                                    <div className="group" data-aos="fade-right" data-aos-duration="1000">
                                         <label className="block text-black font-medium mb-2 text-sm sm:text-base">Message</label>
                                         <textarea
                                             name="message"
@@ -245,7 +245,7 @@ const ContactUs = () => {
                                     <button
                                         type="submit"
                                         className="w-full bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-black text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group"
-                                        data-aos="fade-right" data-aos-duration="1500"
+                                        data-aos="fade-right" data-aos-duration="1000"
                                     >
                                         <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
                                         Send Message
@@ -254,14 +254,14 @@ const ContactUs = () => {
                             </div>
                         </div>
 
-                        <div data-aos="fade-left" data-aos-duration="1500">
+                        <div className='order-1 lg:order-2' data-aos="fade-left" data-aos-duration="1500">
                             <Lottie animationData={ContactUsImage} loop={true} />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container px-4 mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
+            <div className="px-4 mx-auto py-8 sm:py-12 w-[95%] sm:w-[90%]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 w-full mx-auto">
                     <div className={`transition-all lg:col-span-4`} data-aos="fade-right" data-aos-duration="1500">
                         <div className="space-y-6">
@@ -296,7 +296,7 @@ const ContactUs = () => {
                         </div>
                     </div>
 
-                    <div className="shadow-lg lg:col-span-8 h-[50vh] sm:h-[60vh] lg:h-[85vh] flex justify-center items-center w-full order-1 lg:order-2 mt-6 sm:mt-8"
+                    <div className="shadow-lg lg:col-span-8 h-[55vh] sm:h-[80vh] lg:h-[90vh] flex justify-center items-center w-full order-1 lg:order-2 mt-6 sm:mt-8"
                         data-aos="fade-left" data-aos-duration="1500">
                         <iframe
                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBkn10cBeoFz5AGnJ5gyabgpVHZGQfH7qE&q=Zanord Bathroom Accessories"

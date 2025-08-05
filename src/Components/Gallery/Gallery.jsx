@@ -138,7 +138,7 @@ const Gallery = () => {
                         <span className="text-black font-medium">Gallery</span>
                     </div>
 
-                    <h1 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6 relative" data-aos="fade-up" data-aos-duration="1500">
+                    <h1 className="heading-text  text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6 relative" data-aos="fade-up" data-aos-duration="1500">
                         Our <span className='heading-text text-[var(--brand-color)]'>Gallery</span>
                         <div className="absolute -top-1 sm:-top-2 md:-top-3 -right-1 sm:-right-2 md:-right-3">
                             <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-[var(--brand-color)] animate-pulse" />

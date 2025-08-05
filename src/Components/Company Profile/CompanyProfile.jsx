@@ -150,7 +150,7 @@ const CompanyProfile = () => {
 
           {/* Main Title */}
           <div className="relative inline-block">
-            <h1 className="heading-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4 animate-on-scroll opacity-0 transform translate-y-8" style={{ animationDelay: '200ms' }}>
+            <h1 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-3 sm:mb-4 animate-on-scroll opacity-0 transform translate-y-8" style={{ animationDelay: '200ms' }}>
               Company{' '}
               <span className='heading-text relative bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] bg-clip-text text-transparent'>
                 Profile
