@@ -465,7 +465,7 @@ export default function Products() {
                                     </div>
 
                                     {/* Enhanced Product Info */}
-                                    <div className="p-3 space-y-3 text-center relative bg-gradient-to-b from-white to-gray-50/50">
+                                    <div className="p-3 sm:p-6 space-y-3 text-center relative bg-gradient-to-b from-white to-gray-50/50">
                                         {/* Animated Border with Pulse */}
                                         <div className="absolute top-0 left-1/2 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-16 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-500 shadow-lg"></div>
                                         <div className="absolute top-0 left-1/2 w-0 h-0.5 bg-white opacity-75 group-hover:w-16 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-700 animate-pulse"></div>
@@ -482,7 +482,7 @@ export default function Products() {
                                         </h3> */}
 
                                         <button
-                                            className="block sm:hidden relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
+                                            className="block sm:hidden relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-xl sm:rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
                                         >
                                             <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black text-white z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
                                             <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">

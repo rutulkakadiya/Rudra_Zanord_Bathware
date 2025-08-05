@@ -198,7 +198,7 @@ const CompanyProfile = () => {
             {/* Left Content */}
             <div className="group/content">
               <div className="transform transition-all duration-700 hover:translate-x-2">
-                <h2 className="heading-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black leading-tight" data-aos="fade-right" data-aos-duration="1500">
+                <h2 className="heading-text text-center sm:text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black leading-tight" data-aos="fade-right" data-aos-duration="1500">
                   Our{' '}
                   <span className="relative inline-block group/story">
                     <span className="heading-text text-[var(--brand-color)]">
@@ -220,7 +220,7 @@ const CompanyProfile = () => {
                   <StoryPoint delay={200} icon={Award}>
                     Our journey began when our founders, passionate about design and quality, recognized the gap
                     between ordinary bath accessories and truly <span className="font-bold text-black">premium solutions</span>. Using only the finest
-                    <span className="bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] text-white px-1.5 sm:px-2 py-0.5 rounded-full font-bold ml-1">SS 304 grade steel</span>, we craft each piece with meticulous attention to detail.
+                    <span className="bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] text-white px-1.5 sm:px-2 py-0.5 rounded-full font-bold ml-2">SS 304 grade steel</span>, we craft each piece with meticulous attention to detail.
                   </StoryPoint>
 
                   <StoryPoint delay={400} icon={TrendingUp}>
@@ -264,7 +264,7 @@ const CompanyProfile = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="heading-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 animate-on-scroll opacity-0 transform translate-y-8" data-aos="fade-up" data-aos-duration="1500">
+            <h2 className="heading-text text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 animate-on-scroll opacity-0 transform translate-y-8" data-aos="fade-up" data-aos-duration="1500">
               Why Choose <span className="heading-text text-[var(--brand-color)]">Zanord</span>?
             </h2>
           </div>
