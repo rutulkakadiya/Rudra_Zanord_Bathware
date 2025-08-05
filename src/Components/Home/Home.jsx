@@ -7,6 +7,7 @@ import Footer from './Footer'
 import ProductIntro from './ProductIntro'
 import Category from './Category'
 import Whatsapp from '../Whatsapp'
+import ProductShowCase from './ProductShowCase'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <ProductIntro />
       <Products />
+      {/* <ProductShowCase /> */}
       <Category />
       <Footer />
     </div>
