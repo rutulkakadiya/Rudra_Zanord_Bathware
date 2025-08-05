@@ -92,7 +92,7 @@ const CompanyProfile = () => {
         <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[var(--brand-color)] to-[var(--brand-color)] rounded-2xl flex items-center justify-center transform transition-all duration-500 group-hover/feature:rotate-12 group-hover/feature:scale-110 shadow-lg">
           <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" /> {/* Adjusted icon size */}
         </div>
-        <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover/feature:text-[var(--brand-color)] transition-colors duration-300">
+        <h3 className="heading-text text-lg sm:text-xl font-bold text-gray-900 group-hover/feature:text-[var(--brand-color)] transition-colors duration-300">
           {title}
         </h3>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed group-hover/feature:text-gray-800 transition-colors duration-300">
@@ -329,7 +329,7 @@ const CompanyProfile = () => {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[var(--brand-color)] rounded-2xl flex items-center justify-center">
                     <Target className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Vision</h3>
+                  <h3 className="heading-text text-2xl sm:text-3xl font-bold text-gray-900">Our Vision</h3>
                 </div>
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                   Our vision as a bathroom accessories manufacturer is to <strong>transform every bathroom into a haven of comfort and sophistication</strong> by crafting innovative, high-quality products that inspire delightful experiences for our customers worldwide.
@@ -344,7 +344,7 @@ const CompanyProfile = () => {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[var(--brand-color)] rounded-2xl flex items-center justify-center">
                     <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Mission</h3>
+                  <h3 className="heading-text text-2xl sm:text-3xl font-bold text-gray-900">Our Mission</h3>
                 </div>
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                   We are deeply dedicated to maintaining the <strong>highest standards of quality</strong> in every aspect of our production process. From sourcing the finest materials to employing skilled artisans, we ensure each product is crafted with precision and attention to detail.
