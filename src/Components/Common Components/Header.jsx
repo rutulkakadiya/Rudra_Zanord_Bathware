@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Phone, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-import LanguageSelector from '../../../LanguageSelector';
+import LanguageSelector from '../Common Components/LanguageSelector';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

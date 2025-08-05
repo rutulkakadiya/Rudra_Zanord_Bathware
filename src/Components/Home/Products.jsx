@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Eye, Heart, ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Products() {
     const [activeCategory, setActiveCategory] = useState('ovel');
@@ -170,26 +171,23 @@ export default function Products() {
                             <span className="absolute bottom-0 left-0 w-full h-1 bg-[#FDCB2E] transform scale-x-0 origin-left transition-transform duration-1000 delay-500 group-hover:scale-x-100"></span>
                         </span>
                     </h2>
-                    <p className={`text-[16px] sm:text-[18px] text-gray-600 max-w-3xl mx-auto transform transition-all duration-1000 delay-300 ${
-                        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`} data-aos="fade-up" data-aos-duration="1500">
+                    <p className={`text-[16px] sm:text-[18px] text-gray-600 max-w-3xl mx-auto transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                        }`} data-aos="fade-up" data-aos-duration="1500">
                         Discover our carefully curated selection of bathroom accessories that combine style, functionality, and durability.
                     </p>
                 </div>
 
                 {/* Enhanced Category Filter */}
-                <div className={`hidden sm:flex mt-[10px] flex-wrap justify-center gap-4 mb-12 transform transition-all duration-1000 delay-500 ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                }`}>
+                <div className={`hidden sm:flex mt-[10px] flex-wrap justify-center gap-4 mb-12 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    }`}>
                     {categories.map((category, index) => (
                         <button
                             key={category.id}
                             onClick={() => setActiveCategory(category.id)}
-                            className={`px-6 py-3 rounded-full font-medium transition-all duration-500 transform hover:scale-110 hover:rotate-1 relative overflow-hidden group ${
-                                activeCategory === category.id
+                            className={`px-6 py-3 rounded-full font-medium transition-all duration-500 transform hover:scale-110 hover:rotate-1 relative overflow-hidden group ${activeCategory === category.id
                                     ? 'bg-[#FDCB2E] text-black shadow-lg scale-105'
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                            }`}
+                                }`}
                             style={{
                                 animationDelay: `${index * 100}ms`,
                                 animation: isVisible ? 'slideInFromTop 0.8s ease-out forwards' : 'none'
@@ -207,16 +205,15 @@ export default function Products() {
                     {filteredProducts.map((product, index) => (
                         <div
                             key={`${product.category}-${product.id}`}
-                            className={`group cursor-pointer transform transition-all duration-700 ${
-                                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-                            }`}
+                            className={`group cursor-pointer transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+                                }`}
                             style={{
                                 transitionDelay: `${index * 150}ms`
                             }}
                         >
                             {/* Enhanced Product Card Container */}
                             <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 hover:rotate-1">
-                                
+
                                 {/* Badge Animation */}
                                 {product.badge && (
                                     <div className="absolute top-4 right-4 z-20">
@@ -282,7 +279,7 @@ export default function Products() {
                                         )}
                                     </div>
 
-                                  
+
                                 </div>
 
                                 {/* Corner Glow Effect */}
@@ -294,17 +291,18 @@ export default function Products() {
                 </div>
 
                 {/* Enhanced View All Button */}
-                <div className={`text-center mt-12 transform transition-all duration-1000 delay-700 ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                }`}>
-                    <button className="relative px-8 py-3 font-bold bg-black tracking-widest text-white overflow-hidden group text-[15px] rounded-[5px] transition-all duration-1000 hover:scale-105 hover:text-white hover:border-[#FDCB2E] hover:shadow-2xl hover:shadow-[#FDCB2E]/25">
-                        <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[#FDCB2E] z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
-                        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                        <span className="relative z-10 flex items-center gap-2">
-                            View All Products
-                            <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110">→</span>
-                        </span>
-                    </button>
+                <div className={`text-center mt-12 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    }`}>
+                    <Link to={"/products"}>
+                        <button className="relative px-8 py-3 font-bold bg-black tracking-widest text-white overflow-hidden group text-[15px] rounded-[5px] transition-all duration-1000 hover:scale-105 hover:text-white hover:border-[#FDCB2E] hover:shadow-2xl hover:shadow-[#FDCB2E]/25">
+                            <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[#FDCB2E] z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
+                            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                            <span className="relative z-10 flex items-center gap-2">
+                                View All Products
+                                <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110">→</span>
+                            </span>
+                        </button>
+                    </Link>
                 </div>
             </div>
 

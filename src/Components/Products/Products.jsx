@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Header from '../Home/Header';
-import Whatsapp from '../Whatsapp';
+import Header from '../Common Components/Header';
+import Footer from '../Common Components/Footer';
+import Whatsapp from '../Common Components/Whatsapp';
 import { ChevronLeft, ChevronRight, Eye, Sparkles, Star, X } from 'lucide-react';
 
 export default function Products() {
@@ -545,6 +546,7 @@ export default function Products() {
                 </div>
             )}
 
+            <Footer />
             <style jsx>{`
         @keyframes slideInFromTop {
           from {

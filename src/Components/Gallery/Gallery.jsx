@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { X, Download, Share2, Heart, Eye, ZoomIn, ChevronLeft, ChevronRight, Grid, List, Sparkles, Star, Award, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Header from '../Home/Header';
-import Whatsapp from '../Whatsapp';
-import Footer from '../Home/Footer';
+import Header from '../Common Components/Header';
+import Whatsapp from '../Common Components/Whatsapp';
+import Footer from '../Common Components/Footer';
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);

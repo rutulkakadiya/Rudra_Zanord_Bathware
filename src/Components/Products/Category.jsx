@@ -1,8 +1,9 @@
 import React from 'react'
-import Header from '../Home/Header';
-import Whatsapp from '../Whatsapp';
+import Header from '../Common Components/Header';
+import Whatsapp from '../Common Components/Whatsapp';
 import { Link } from 'react-router-dom';
 import { Eye, Sparkles, Star } from 'lucide-react';
+import Footer from '../Common Components/Footer';
 
 export default function Category() {
 
@@ -223,7 +224,7 @@ export default function Category() {
 
                                     <Link to={`/products/${product.category}`}>
                                         <button
-                                            className="relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
+                                            className="block sm:hidden relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
                                         >
                                             <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black text-white z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
                                             <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
@@ -244,6 +245,7 @@ export default function Category() {
                 </div>
             </div>
 
+<Footer/>
 
             <style jsx>{`
                 @keyframes slideInFromTop {

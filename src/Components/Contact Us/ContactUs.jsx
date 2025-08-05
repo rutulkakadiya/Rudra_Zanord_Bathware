@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, Star, Sparkles } from 'lucide-react';
-import Header from '../Home/Header';
+import Header from '../Common Components/Header';
 import ContactUsImage from '../../../public/contactUs.json';
 import Lottie from 'lottie-react';
-import Footer from '../Home/Footer';
-import Whatsapp from '../Whatsapp';
+import Footer from '../Common Components/Footer';
+import Whatsapp from '../Common Components/Whatsapp';
 import { Link } from 'react-router-dom';
 
 const ContactUs = () => {

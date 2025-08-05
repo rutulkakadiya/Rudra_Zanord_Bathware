@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Download, FileText, Eye, Share2, Mail, Phone, MapPin, Star, Check, Play, Pause, Volume2, VolumeX, ExternalLink, Calendar, Clock, Users, Award, Sparkles } from 'lucide-react';
-import Header from '../Home/Header';
-import Whatsapp from '../Whatsapp';
-import Footer from '../Home/Footer';
+import Header from '../Common Components/Header';
+import Whatsapp from '../Common Components/Whatsapp';
+import Footer from '../Common Components/Footer';
 import { Link } from 'react-router-dom';
 
 const ZanordEBrochure = () => {

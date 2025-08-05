@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Shield, Award, Users, Wrench, Star, ArrowRight, Sparkles, CheckCircle, TrendingUp, Heart, Settings, Palette, Globe, Trophy, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Header from '../Home/Header';
-import Whatsapp from '../Whatsapp';
-import Footer from '../Home/Footer';
+import Header from '../Common Components/Header';
+import Whatsapp from '../Common Components/Whatsapp';
+import Footer from '../Common Components/Footer';
 
 const CompanyProfile = () => {
   const [scrollY, setScrollY] = useState(0);

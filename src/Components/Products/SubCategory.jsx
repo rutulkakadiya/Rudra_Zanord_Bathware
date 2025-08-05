@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Header from '../Home/Header';
-import Whatsapp from '../Whatsapp';
+import Header from '../Common Components/Header';
+import Footer from '../Common Components/Footer';
+import Whatsapp from '../Common Components/Whatsapp';
 import { Eye, Sparkles, Star } from 'lucide-react';
 
 export default function SubCategory() {
@@ -35,7 +36,7 @@ export default function SubCategory() {
             name: "Ovel PVD Black Matt",
             category: "ovel",
             subCategory: "ovel_pvd_black_matt",
-            image: "/ovel_pvd_black_matt.jpg",
+            image: "/ovel_pvd_balck_matt.jpg",
         },
         {
             id: 5,
@@ -396,6 +397,7 @@ export default function SubCategory() {
                 </div>
             </div>
 
+<Footer/>
             <style jsx>{`
         @keyframes slideInFromTop {
           from {
