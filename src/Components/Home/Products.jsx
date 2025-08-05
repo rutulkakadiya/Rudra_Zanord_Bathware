@@ -185,8 +185,8 @@ export default function Products() {
                             key={category.id}
                             onClick={() => setActiveCategory(category.id)}
                             className={`px-6 py-3 rounded-full font-medium transition-all duration-500 transform hover:scale-110 hover:rotate-1 relative overflow-hidden group ${activeCategory === category.id
-                                    ? 'bg-[#FDCB2E] text-black shadow-lg scale-105'
-                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                ? 'bg-[#FDCB2E] text-black shadow-lg scale-105'
+                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                 }`}
                             style={{
                                 animationDelay: `${index * 100}ms`,
@@ -246,12 +246,14 @@ export default function Products() {
 
                                     {/* Enhanced Quick View Overlay */}
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/20">
-                                        <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-semibold transform translate-y-6 scale-90 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-500 hover:bg-[#FDCB2E] hover:text-white shadow-lg hover:shadow-xl">
-                                            <span className="flex items-center gap-2">
-                                                <Eye size={16} />
-                                                View Products
-                                            </span>
-                                        </button>
+                                        <Link to={"/products"}>
+                                            <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-semibold transform translate-y-6 scale-90 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-500 hover:bg-[#FDCB2E] hover:text-white shadow-lg hover:shadow-xl">
+                                                <span className="flex items-center gap-2">
+                                                    <Eye size={16} />
+                                                    View Products
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
 
                                     {/* Enhanced Shine Effect */}
@@ -279,7 +281,18 @@ export default function Products() {
                                         )}
                                     </div>
 
+                                    <Link to={`/products`}>
+                                        <button
+                                            className="block sm:hidden relative w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30"
+                                        >
+                                            <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black text-white z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
+                                            <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+                                                <Eye size={16} />
 
+                                                View Products
+                                            </span>
+                                        </button>
+                                    </Link>
                                 </div>
 
                                 {/* Corner Glow Effect */}
