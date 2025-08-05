@@ -109,16 +109,16 @@ export default function Slider() {
                             {/* Slide Content */}
                             <div className="relative z-10 max-w-2xl text-left ms-[3%]">
                                 <div
-                                    className={`inline-flex items-center gap-2 mb-6 px-6 py-3 bg-[var(--brand-color)] text-black text-sm font-bold rounded-full transition-all duration-1000 backdrop-blur-sm border border-[var(--brand-color)]/50 ${activeSlide === index ? 'translate-x-0 opacity-100 scale-100' : '-translate-x-20 opacity-0 scale-95'
+                                    className={`inline-flex items-center gap-2 mb-6 px-3 sm:px-6 py-1 sm:py-3 bg-[var(--brand-color)] text-black text-sm font-bold rounded-full transition-all duration-1000 backdrop-blur-sm border border-[var(--brand-color)]/50 ${activeSlide === index ? 'translate-x-0 opacity-100 scale-100' : '-translate-x-20 opacity-0 scale-95'
                                         }`}
                                     style={{
                                         transitionDelay: activeSlide === index ? '300ms' : '0ms',
                                         boxShadow: '0 4px 20px rgba(253, 203, 46, 0.3)',
                                     }}
                                 >
-                                    <Star className="w-4 h-4" />
+                                    <Star className="w-3 sm:w-4 h-3 sm:h-4" />
                                     {slide.accent}
-                                    <Sparkles className="w-4 h-4" />
+                                    <Sparkles className="w-3 sm:w-4 h-3 sm:h-4" />
                                 </div>
 
                                 <h2
@@ -165,8 +165,7 @@ export default function Slider() {
                                 >
                                     <Link to="/products">
                                         <button
-                                            className="relative px-6 py-4 sm:px-8 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50"
-                                            onMouseEnter={() => console.log(`Hovering button on slide ${index}`)} // Debug
+                                            className="relative px-3 py-2 sm:px-8 sm:py-4 font-bold bg-[var(--brand-color)] sm:tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-xl sm:rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50"
                                         >
                                             <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
                                             <span className="relative z-10 flex items-center justify-center gap-3">
@@ -189,19 +188,19 @@ export default function Slider() {
                 ))}
             </div>
             {/* Navigation Arrows */}
-            <button onClick={prevSlide} className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-black/60 hover:bg-[var(--brand-color)] rounded-full border-2 border-[var(--brand-color)] hover:border-white backdrop-blur-md transition-all duration-500 hover:scale-125 shadow-2xl flex items-center justify-center group"
+            <button onClick={prevSlide} className="absolute left-[39%] sm:left-[42%] md:left-[44%] lg:left-[45%] xl:left-[46%] 2xl:left-[46.5%] top-[88%] -translate-y-1/2 z-20 w-9 sm:w-12 h-9 sm:h-12 bg-black/60 hover:bg-[var(--brand-color)] rounded-full border-2 border-[var(--brand-color)] hover:border-white backdrop-blur-md transition-all duration-500 hover:scale-110 shadow-2xl flex items-center justify-center group"
                 style={{ boxShadow: '0 8px 32px rgba(253, 203, 46, 0.4)' }}
             >
-                <ChevronLeft className="w-7 h-7 text-[var(--brand-color)] group-hover:text-black transition-all duration-300" />
+                <ChevronLeft className="w-5 sm:w-7 h-5 sm:h-7 text-[var(--brand-color)] group-hover:text-black transition-all duration-300" />
             </button>
-            <button onClick={nextSlide} className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-black/60 hover:bg-[var(--brand-color)] rounded-full border-2 border-[var(--brand-color)] hover:border-white backdrop-blur-md transition-all duration-500 hover:scale-125 shadow-2xl flex items-center justify-center group"
+            <button onClick={nextSlide} className="absolute right-[39%] sm:right-[42%] md:right-[44%] lg:right-[45%] xl:right-[46%] 2xl:right-[46.5%] top-[88%] -translate-y-1/2 z-20 w-9 sm:w-12 h-9 sm:h-12 bg-black/60 hover:bg-[var(--brand-color)] rounded-full border-2 border-[var(--brand-color)] hover:border-white backdrop-blur-md transition-all duration-500 hover:scale-110 shadow-2xl flex items-center justify-center group"
                 style={{ boxShadow: '0 8px 32px rgba(253, 203, 46, 0.4)' }}
             >
-                <ChevronRight className="w-7 h-7 text-[var(--brand-color)] group-hover:text-black transition-all duration-300" />
+                <ChevronRight className="w-5 sm:w-7 h-5 sm:h-7 text-[var(--brand-color)] group-hover:text-black transition-all duration-300" />
             </button>
 
             {/* Indicators */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
+            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
                 {slides.map((_, index) => (
                     <button
                         key={index}

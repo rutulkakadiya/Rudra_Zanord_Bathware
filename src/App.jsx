@@ -10,6 +10,7 @@ import CompanyProfile from './Components/Company Profile/CompanyProfile';
 import Category from './Components/Products/Category';
 import Products from './Components/Products/Products';
 import SubCategory from './Components/Products/SubCategory';
+import ScrollToTop from './Components/Common Components/ScrollToTop';
 
 export default function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/companyProfile' element={<CompanyProfile />}></Route>
