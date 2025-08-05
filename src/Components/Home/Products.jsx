@@ -161,7 +161,7 @@ export default function Products() {
     const filteredProducts = products.filter(product => product.subCategory === activeCategory);
 
     return (
-        <section className="section-padding bg-white mt-[150px] overflow-hidden">
+        <section className="section-padding bg-white mt-[100px] overflow-hidden">
             <div className="w-[95%] sm:w-[90%] mx-auto container-padding">
                 {/* Section Header with Enhanced Animations */}
                 <div className="text-center mb-16">
