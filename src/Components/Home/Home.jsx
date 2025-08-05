@@ -10,6 +10,12 @@ import Whatsapp from "../Common Components/Whatsapp"
 import TextScroll from '../Common Components/TextScroll'
 
 export default function Home() {
+  const collections = [
+    "Ovel Collection",
+    "Square Collection",
+    "Aristo Collection",
+    "Shelf & Corner Collection"
+  ];
   return (
     <div>
       <Whatsapp />
@@ -19,9 +25,9 @@ export default function Home() {
 
       <ProductIntro />
       <TextScroll
-        className="heading-text text-center mt-[50px] bg-white text-4xl font-semibold tracking-tighter text-black md:text-7xl md:leading-[5rem]"
-        text="Ovel Collection &nbsp;&nbsp; • &nbsp;&nbsp; Square Collection &nbsp;&nbsp; • &nbsp;&nbsp; Aristo Collection &nbsp;&nbsp; • &nbsp;&nbsp; Shelf & Corner Collection"
-        default_velocity={1}
+        text={collections}
+        default_velocity={1.5}
+        className="text-4xl sm:text-5xl md:text-6xl font-bold"
       />
       <Products />
       {/* <ProductShowCase /> */}
