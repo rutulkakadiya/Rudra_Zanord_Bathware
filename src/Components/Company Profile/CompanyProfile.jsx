@@ -90,7 +90,7 @@ const CompanyProfile = () => {
     >
       <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
         <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[var(--brand-color)] to-[var(--brand-color)] rounded-2xl flex items-center justify-center transform transition-all duration-500 group-hover/feature:rotate-12 group-hover/feature:scale-110 shadow-lg">
-          <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" /> {/* Adjusted icon size */}
+          <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" /> 
         </div>
         <h3 className="heading-text text-lg sm:text-xl font-bold text-gray-900 group-hover/feature:text-[var(--brand-color)] transition-colors duration-300">
           {title}
