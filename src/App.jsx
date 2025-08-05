@@ -8,8 +8,8 @@ import EBrochure from './Components/E-Brochure/E-Brochure';
 import Gallery from './Components/Gallery/Gallery';
 import CompanyProfile from './Components/Company Profile/CompanyProfile';
 import Category from './Components/Products/Category';
-import SubCategory from './Components/Products/subCategory';
 import Products from './Components/Products/Products';
+import SubCategory from './Components/Products/SubCategory';
 
 export default function App() {
   useEffect(() => {
