@@ -4,6 +4,8 @@ import Header from '../Common Components/Header';
 import Footer from '../Common Components/Footer';
 import Whatsapp from '../Common Components/Whatsapp';
 import { Eye, Sparkles, Star } from 'lucide-react';
+import TextScroll from '../Common Components/TextScroll';
+import TextScroll1 from '../Common Components/TextScroll1';
 
 export default function SubCategory() {
     // Get the category from the URL
@@ -80,7 +82,7 @@ export default function SubCategory() {
             name: "Square PVD Black Matt",
             category: "square",
             subCategory: "square_pvd_black_matt",
-            image: "/square_pvd_black_matt.jpg",
+            image: "/square_pvd_balck_matt.jpg",
         },
         {
             id: 11,
@@ -123,7 +125,7 @@ export default function SubCategory() {
             name: "Aristo PVD Black Matt",
             category: "aristo",
             subCategory: "aristo_pvd_black_matt",
-            image: "/aristo_pvd_black_matt.jpg",
+            image: "/aristo_pvd_balck_matt.jpg",
         },
         {
             id: 17,
@@ -207,6 +209,10 @@ export default function SubCategory() {
             .join(' ');
     };
 
+    const collections = [
+        `${formatCategory(category)} Collection`,
+        `${formatCategory(category)} Collection`,
+    ];
     return (
         <div>
             <Header />
@@ -270,6 +276,7 @@ export default function SubCategory() {
                             </span>
                         </h1>
 
+
                         {/* Floating sparkles */}
                         <div className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4">
                             <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[var(--brand-color)] animate-spin" style={{ animationDuration: '8s' }} />
@@ -299,7 +306,14 @@ export default function SubCategory() {
                         Crafting Excellence in Bathroom Aesthetics with Premium SS 304 Steel
                     </p>
                 </div>
+                <TextScroll1
+                    text={collections}
+                    default_velocity={1.5}
+                    className="heading-text text-4xl sm:text-5xl md:text-6xl font-bold"
+                />
+
             </div>
+
 
             <div className="flex justify-center">
                 <div className="w-[95%] sm:w-[90%] px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -353,7 +367,7 @@ export default function SubCategory() {
                                                         View Products
                                                     </span>
                                                 </button>
-                                                </Link>
+                                            </Link>
                                         </div>
 
                                         {/* Enhanced Shine Effect */}
@@ -397,7 +411,7 @@ export default function SubCategory() {
                 </div>
             </div>
 
-<Footer/>
+            <Footer />
             <style jsx>{`
         @keyframes slideInFromTop {
           from {
