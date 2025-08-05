@@ -45,7 +45,7 @@ const ContactUs = () => {
         {
             icon: Mail,
             title: 'Email',
-            info: 'zanordnath@gmail.com',
+            info: 'zanordbath@gmail.com',
             subInfo: 'Send Us a Message'
         },
         {
