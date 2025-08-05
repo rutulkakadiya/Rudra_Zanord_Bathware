@@ -37,7 +37,7 @@ export default function About() {
                 <div className="absolute bottom-32 right-32 w-6 h-6 bg-[var(--brand-color)]/20 rotate-45 animate-bounce" />
                 <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-[var(--brand-color)]/40 rounded-full animate-ping" />
 
-                <div className="max-w-7xl mx-auto relative z-10">
+                <div className="w-[95%] sm:w-[90%] mx-auto relative z-10">
                     <div className="text-center mb-12 sm:mb-16">
                         <div className="inline-block mb-6 transition-all duration-1000 transform">
                             <span className="px-6 py-3 bg-[var(--brand-color)]/10 backdrop-blur-sm rounded-full text-[var(--brand-color)] text-sm font-semibold tracking-wider border-2 border-[var(--brand-color)]/20 hover:bg-[var(--brand-color)]/20 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-duration="1500">

@@ -262,7 +262,7 @@ const CompanyProfile = () => {
       </section>
 
       <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="w-[95%] sm:w-[90%] mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="heading-text text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 animate-on-scroll opacity-0 transform translate-y-8" data-aos="fade-up" data-aos-duration="1500">
               Why Choose <span className="heading-text text-[var(--brand-color)]">Zanord</span>?
@@ -316,7 +316,7 @@ const CompanyProfile = () => {
       </section>
 
       <section className="py-12 sm:py-16 md:py-20">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="w-[95%] sm:w-[90%] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {/* Vision */}
             <div className="transform translate-y-8" data-aos="fade-right" data-aos-duration="1500">
