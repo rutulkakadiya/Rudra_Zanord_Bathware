@@ -43,7 +43,7 @@ export default function Footer() {
 
     return (
         <>
-            <footer 
+            <footer
                 className="relative bg-black text-white mt-[100px] overflow-hidden"
                 onMouseMove={handleMouseMove}
             >
@@ -87,7 +87,7 @@ export default function Footer() {
                         {/* Company Info */}
                         <div className="lg:col-span-2 group">
                             <div className="flex items-center space-x-3 mb-6 transform transition-all duration-500 hover:scale-105">
-                               <img className='h-[70px]' src="/footer_logo.png" alt="" />
+                                <img className='h-[70px]' src="/footer_logo.png" alt="" />
                             </div>
                             <p className="text-gray-300 mb-6 leading-relaxed transform transition-all duration-500 hover:text-white">
                                 Transforming bathrooms into luxurious sanctuaries with premium accessories that combine style, functionality, and durability. Your trusted partner in bathroom excellence.
@@ -102,8 +102,8 @@ export default function Footer() {
                             </h3>
                             <div className="space-y-4">
                                 {[{ icon: Phone, text: '+91 12345 67890' },
-                                  { icon: Mail, text: 'zanordbath@gmail.com' },
-                                  { icon: MapPin, text: 'Rajkot, Gujarat' }].map((item, index) => (
+                                { icon: Mail, text: 'zanordbath@gmail.com' },
+                                { icon: MapPin, text: 'Rajkot, Gujarat' }].map((item, index) => (
                                     <div key={index} className="flex items-center space-x-3 group/item transform transition-all duration-300 hover:translate-x-2">
                                         <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center group-hover/item:bg-[#FDCB2E] group-hover/item:text-black transition-all duration-300">
                                             <item.icon className="w-5 h-5 text-[#FDCB2E] group-hover/item:text-black" />
@@ -185,9 +185,8 @@ export default function Footer() {
             {/* Back to Top Button */}
             <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className={`fixed bottom-[13%] right-4 w-14 h-14 bg-gradient-to-r from-[#FDCB2E] to-yellow-400 text-black rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 z-50 transform ${
-                    isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-0'
-                } hover:scale-110 hover:shadow-[0_0_30px_rgba(253,203,46,0.5)] group`}
+                className={`fixed bottom-[13%] right-4 w-14 h-14 bg-gradient-to-r from-[#FDCB2E] to-yellow-400 text-black rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 z-50 transform ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-0'
+                    } hover:scale-110 hover:shadow-[0_0_30px_rgba(253,203,46,0.5)] group`}
                 aria-label="Back to top"
             >
                 <ChevronUp className="w-6 h-6 transform transition-transform duration-300 group-hover:-translate-y-1" />
