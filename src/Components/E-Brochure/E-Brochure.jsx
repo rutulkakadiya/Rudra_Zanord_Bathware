@@ -42,7 +42,7 @@ const ZanordEBrochure = () => {
           setIsDownloading(false);
           setDownloadCount(prev => prev + 1);
           const link = document.createElement('a');
-          link.href = '#';
+          link.href = '/zanord_bath.pdf';
           link.download = `zanord-brochure-${format}.${format === 'pdf' ? 'pdf' : format === 'ppt' ? 'pptx' : 'zip'}`;
           link.click();
           return 100;
@@ -53,7 +53,7 @@ const ZanordEBrochure = () => {
   };
 
   const handlePreview = () => {
-    window.open('#preview', '_blank');
+    window.open('/zanord_bath.pdf', '_blank');
   };
 
   const handleEmailSubmit = () => {

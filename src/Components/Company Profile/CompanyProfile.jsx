@@ -205,7 +205,7 @@ const CompanyProfile = () => {
                 <h2 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 text-black leading-tight" data-aos="fade-right" data-aos-duration="1500">
                   Our{' '}
                   <span className="relative inline-block group/story">
-                    <span className="heading-text bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] bg-clip-text text-transparent">
+                    <span className="heading-text text-[var(--brand-color)]">
                       Story
                     </span>
                     <div className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-1 sm:h-2 bg-gradient-to-r from-[var(--brand-color)] to-[var(--brand-color)] transform scale-x-0 group-hover/story:scale-x-100 transition-transform duration-700 rounded-full"></div>
@@ -236,7 +236,7 @@ const CompanyProfile = () => {
             </div>
 
             {/* Right Image Section with Enhanced Effects */}
-            <div className="relative group/image animate-on-scroll opacity-0 transform translate-x-[50px]" style={{ animationDelay: '400ms' }} data-aos="fade-left" data-aos-duration="1500">
+            <div className="relative group/image transform translate-x-[50px]" data-aos="fade-left" data-aos-duration="1500">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 {/* Image Container */}
                 <div className="relative transform transition-all duration-700 group-hover/image:scale-105">
@@ -323,7 +323,7 @@ const CompanyProfile = () => {
         <div className="w-full sm:w-[95%] lg:w-[90%] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Vision */}
-            <div className="animate-on-scroll opacity-0 transform translate-y-8" style={{ animationDelay: '200ms' }} data-aos="fade-right" data-aos-duration="1500">
+            <div className="transform translate-y-8" data-aos="fade-right" data-aos-duration="1500">
               <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[var(--brand-color)]">
                 <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[var(--brand-color)] rounded-2xl flex items-center justify-center">
@@ -338,7 +338,7 @@ const CompanyProfile = () => {
             </div>
 
             {/* Quality */}
-            <div className="animate-on-scroll opacity-0 transform translate-y-8" style={{ animationDelay: '400ms' }} data-aos="fade-left" data-aos-duration="1500">
+            <div className="transform translate-y-8" data-aos="fade-left" data-aos-duration="1500">
               <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[var(--brand-color)]">
                 <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[var(--brand-color)] rounded-2xl flex items-center justify-center">

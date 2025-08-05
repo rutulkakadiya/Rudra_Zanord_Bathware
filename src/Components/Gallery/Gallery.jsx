@@ -146,20 +146,20 @@ const Gallery = () => {
             {/* Header Section */}
             <div className="py-8 sm:py-12 md:py-16">
                 <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6">
+                    <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6" data-aos="fade-up" data-aos-duration="1500">
                         <Link to={"/"}>Home</Link>
                         <span>/</span>
                         <span className="text-black font-medium">Gallery</span>
                     </div>
 
-                    <h1 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6 relative">
+                    <h1 className="heading-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-3 sm:mb-4 md:mb-6 relative" data-aos="fade-up" data-aos-duration="1500">
                         Our <span className='heading-text text-[var(--brand-color)]'>Gallery</span>
                         <div className="absolute -top-1 sm:-top-2 md:-top-3 -right-1 sm:-right-2 md:-right-3">
                             <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-[var(--brand-color)] animate-pulse" />
                         </div>
                     </h1>
 
-                    <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
+                    <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8" data-aos="fade-up" data-aos-duration="1500">
                         Explore our premium collection of bathroom and kitchen accessories designed for modern living
                     </p>
 
