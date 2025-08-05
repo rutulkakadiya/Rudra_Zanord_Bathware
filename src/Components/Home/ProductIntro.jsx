@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductIntro = () => {
     const products = [
@@ -46,10 +47,13 @@ const ProductIntro = () => {
                     Our premium bathroom accessories — from the sleek towel ring, the elegant soap dish, to the spacious towel rack — are crafted to elevate your everyday routine.
                 </p>
 
-                <button className="relative px-6 sm:px-8 py-2 sm:py-3 font-semibold bg-black text-white tracking-wider rounded-md overflow-hidden group hover:scale-105 transition-transform duration-500">
-                    <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[var(--brand-color)] z-[-1] transition-all duration-700 group-hover:w-[250%]"></span>
-                    View Products
-                </button>
+
+                <Link to={"/products"}>
+                    <button className="relative px-6 sm:px-8 py-2 sm:py-3 font-semibold bg-black text-white tracking-wider rounded-md overflow-hidden group hover:scale-105 transition-transform duration-500">
+                        <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[var(--brand-color)] z-[-1] transition-all duration-700 group-hover:w-[250%]"></span>
+                        View Products
+                    </button>
+                </Link>
             </div>
 
             {/* Blinking Dots + Popups */}

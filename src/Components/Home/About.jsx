@@ -1,5 +1,6 @@
 import { div } from 'framer-motion/client';
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function About() {
@@ -122,25 +123,29 @@ export default function About() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-6" data-aos="fade-left" data-aos-duration="1500">
-                                <button className="relative px-6 py-4 sm:px-8 sm:py-4 font-bold bg-black tracking-widest text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50">
-                                    <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[var(--brand-color)] z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
-                                    <span className="relative z-10 flex items-center justify-center gap-3">
-                                        Learn More
-                                        <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </span>
-                                </button>
+                                <Link to={"/companyProfile"}>
+                                    <button className="relative px-6 py-4 sm:px-8 sm:py-4 font-bold bg-black tracking-widest text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50">
+                                        <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[var(--brand-color)] z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
+                                        <span className="relative z-10 flex items-center justify-center gap-3">
+                                            Learn More
+                                            <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </Link>
 
 
-                                <button className="px-6 py-4 sm:px-8 sm:py-4 font-bold text-[var(--brand-color)] border-2 border-[var(--brand-color)] rounded-2xl hover:bg-[var(--brand-color)] hover:text-white transition-all duration-500 hover:scale-105 hover:shadow-lg group text-sm sm:text-base">
-                                    <span className="flex items-center justify-center gap-3">
-                                        View Products
-                                        <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </span>
-                                </button>
+                                <Link to={"/products"}>
+                                    <button className="px-6 py-4 sm:px-8 sm:py-4 font-bold text-[var(--brand-color)] border-2 border-[var(--brand-color)] rounded-2xl hover:bg-[var(--brand-color)] hover:text-white transition-all duration-500 hover:scale-105 hover:shadow-lg group text-sm sm:text-base">
+                                        <span className="flex items-center justify-center gap-3">
+                                            View Products
+                                            <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

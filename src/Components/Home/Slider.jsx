@@ -157,16 +157,16 @@ export default function Slider() {
 
                                 {/* Explore Button */}
                                 <div
-                                    className={`transition-all duration-1000 z-20 ${activeSlide === index ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-12 opacity-0 pointer-events-none'
+                                    className={`transition-all duration-1000 z-20 pointer-events-auto ${activeSlide === index ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0 pointer-events-none'
                                         }`}
                                     style={{
                                         transitionDelay: activeSlide === index ? '900ms' : '0ms',
                                     }}
                                 >
-                                    <Link to="/products" style={{ pointerEvents: activeSlide === index ? 'auto' : 'none' }}>
+                                    <Link to="/products">
                                         <button
                                             className="relative px-6 py-4 sm:px-8 sm:py-4 font-bold bg-[var(--brand-color)] tracking-widest text-black hover:text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50"
-                                            onMouseEnter={() => console.log(`Hovering button on slide ${index}`)}
+                                            onMouseEnter={() => console.log(`Hovering button on slide ${index}`)} // Debug
                                         >
                                             <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-black z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
                                             <span className="relative z-10 flex items-center justify-center gap-3">

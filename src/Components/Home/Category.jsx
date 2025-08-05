@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Category() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -91,7 +92,7 @@ export default function Category() {
                     <div className="space-y-6 order-2 sm:order-1" data-aos="fade-right" data-aos-duration="1500">
                         {/* Enhanced Badge */}
                         <div className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[var(--brand-color)]/10 to-[var(--brand-color)]/5 rounded-full border border-[var(--brand-color)]/20 backdrop-blur-sm transform transition-all duration-1000 hover:scale-105 hover:bg-gradient-to-r hover:from-[var(--brand-color)]/15 hover:to-[var(--brand-color)]/10 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-                            <Star className="w-4 h-4 text-[var(--brand-color)]"/>
+                            <Star className="w-4 h-4 text-[var(--brand-color)]" />
                             <p className="text-[var(--brand-color)] text-xs sm:text-sm font-medium tracking-[2px] animate-pulse">
                                 THE BEST, A LITTLE BETTER
                             </p>
@@ -121,7 +122,7 @@ export default function Category() {
                                     <li
                                         key={index}
                                         className={`group flex items-center gap-3 p-3 rounded-lg hover:bg-gradient-to-r hover:from-[var(--brand-color)]/5 hover:to-transparent transition-all duration-300 cursor-pointer transform hover:translate-x-2 hover:scale-105 ${hoveredItem === index ? 'shadow-lg' : ''}`}
-                                        style={{ 
+                                        style={{
                                             animationDelay: item.delay,
                                             transitionDelay: `${index * 100}ms`
                                         }}
@@ -144,7 +145,7 @@ export default function Category() {
                                     <li
                                         key={index + 3}
                                         className={`group flex items-center gap-3 p-3 rounded-lg hover:bg-gradient-to-r hover:from-[var(--brand-color)]/5 hover:to-transparent transition-all duration-300 cursor-pointer transform hover:translate-x-2 hover:scale-105 ${hoveredItem === index + 3 ? 'shadow-lg' : ''}`}
-                                        style={{ 
+                                        style={{
                                             animationDelay: item.delay,
                                             transitionDelay: `${(index + 3) * 100}ms`
                                         }}
@@ -165,22 +166,24 @@ export default function Category() {
 
                         {/* Enhanced CTA Button */}
                         <div className={`transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`} data-aos="fade-right" data-aos-duration="1500">
-                            <button className="relative px-5 py-3 sm:px-8 sm:py-4 font-bold bg-black tracking-widest text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50 hover:-translate-y-1">
-                                <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[var(--brand-color)] z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
-                                
-                                {/* Animated shine effect */}
-                                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                                
-                                <span className="relative z-10 flex items-center justify-center gap-3">
-                                    Learn More
-                                    <svg className="w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </span>
+                            <Link to={"/products"}>
+                                <button className="relative px-5 py-3 sm:px-8 sm:py-4 font-bold bg-black tracking-widest text-white overflow-hidden group text-sm sm:text-base rounded-2xl transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--brand-color)]/30 border-2 border-transparent hover:border-[var(--brand-color)]/50 hover:-translate-y-1">
+                                    <span className="absolute left-[-50px] top-0 h-full w-0 skew-x-[45deg] bg-[var(--brand-color)] z-[-1] transition-all duration-1000 group-hover:w-[250%]"></span>
 
-                                {/* Ripple effect */}
-                                <span className="absolute inset-0 rounded-2xl bg-[var(--brand-color)]/20 scale-0 group-active:scale-100 transition-transform duration-200"></span>
-                            </button>
+                                    {/* Animated shine effect */}
+                                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+
+                                    <span className="relative z-10 flex items-center justify-center gap-3">
+                                        Learn More
+                                        <svg className="w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </span>
+
+                                    {/* Ripple effect */}
+                                    <span className="absolute inset-0 rounded-2xl bg-[var(--brand-color)]/20 scale-0 group-active:scale-100 transition-transform duration-200"></span>
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -189,7 +192,7 @@ export default function Category() {
                         <div className="relative group">
                             {/* Floating frame effect */}
                             <div className="absolute -inset-4 bg-gradient-to-r from-[var(--brand-color)]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-                            
+
                             {/* Image glow effect */}
                             <div className="absolute -inset-2 bg-gradient-to-r from-[var(--brand-color)]/20 via-transparent to-[var(--brand-color)]/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -229,7 +232,7 @@ export default function Category() {
                                         animationDuration: '3s'
                                     }}
                                 ></div>
-                                
+
                                 {/* Hover ring effect */}
                                 <div className="absolute inset-0 w-6 h-6 -translate-x-1.5 -translate-y-1.5 border border-[var(--brand-color)]/30 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
                             </div>
