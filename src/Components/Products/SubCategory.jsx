@@ -211,7 +211,7 @@ export default function SubCategory() {
 
     const collections = [
         `${formatCategory(category)} Collection`,
-        `${formatCategory(category)} Collection`,
+        "",
     ];
     return (
         <div>

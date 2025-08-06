@@ -61,24 +61,30 @@ export default function TextScroll({ text, default_velocity = 5, className }) {
 
         return (
             <div className=" w-full overflow-hidden whitespace-nowrap mt-[50px]" ref={containerRef}>
-                <motion.div className={cn('inline-block', className)} style={{ x }}>
-                    {Array.from({ length: repetitions }).map((_, i) => (
-                        <span key={i} ref={i === 0 ? textRef : null}>
-                            {Array.isArray(children) ? (
-                                children.map((item, index) => (
-                                    <span key={index} className="heading-text inline-block mx-4 text-black hover:text-[#FDCB2E] transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer">
-                                        {item}
-                                        {index < children.length - 1 && (
-                                            <span className="mx-4 text-[#FDCB2E]">•</span>
-                                        )}
-                                    </span>
-                                ))
-                            ) : (
-                                <span className="text-black">{children}</span>
-                            )}
-                        </span>
-                    ))}
-                </motion.div>
+                <div className="w-full overflow-hidden whitespace-nowrap mt-[50px]" ref={containerRef}>
+                    <motion.div className={cn('inline-block', className)} style={{ x }}>
+                        {Array.from({ length: repetitions }).map((_, i) => (
+                            <span key={i} ref={i === 0 ? textRef : null} className="inline-block">
+                                {Array.isArray(children) ? (
+                                    children.map((item, index) => (
+                                        <span key={index} className="heading-text inline-block text-black hover:text-[#FDCB2E] transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                                            {item}
+                                            {index < children.length - 1 && (
+                                                <span className="mx-[20px] text-[#FDCB2E]">•</span>
+                                            )}
+                                        </span>
+                                    ))
+                                ) : (
+                                    <span className="text-black">{children}</span>
+                                )}
+                                {/* Add bullet after each repetition except the last one */}
+                                {i < repetitions - 1 && (
+                                    <span className="mx-[20px] text-[#FDCB2E]">•</span>
+                                )}
+                            </span>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         )
     }

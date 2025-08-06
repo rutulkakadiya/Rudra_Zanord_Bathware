@@ -66,10 +66,10 @@ export default function TextScroll1({ text, default_velocity = 5, className }) {
                         <span key={i} ref={i === 0 ? textRef : null}>
                             {Array.isArray(children) ? (
                                 children.map((item, index) => (
-                                    <span key={index} className="heading-text inline-block mx-4 text-black hover:text-[#FDCB2E] transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                                    <span key={index} className="heading-text inline-block text-black hover:text-[#FDCB2E] transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer">
                                         {item}
                                         {index < children.length - 1 && (
-                                            <span className="mx-4 text-[#FDCB2E]">•</span>
+                                            <span className="mx-[20px] text-[#FDCB2E]">•</span>
                                         )}
                                     </span>
                                 ))
