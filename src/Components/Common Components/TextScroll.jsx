@@ -61,7 +61,7 @@ export default function TextScroll({ text, default_velocity = 5, className }) {
 
         return (
             <div className=" w-full overflow-hidden whitespace-nowrap mt-[50px]" ref={containerRef}>
-                <div className="w-full overflow-hidden whitespace-nowrap mt-[50px]" ref={containerRef}>
+                <div className="w-full overflow-hidden whitespace-nowrap" ref={containerRef}>
                     <motion.div className={cn('inline-block', className)} style={{ x }}>
                         {Array.from({ length: repetitions }).map((_, i) => (
                             <span key={i} ref={i === 0 ? textRef : null} className="inline-block">

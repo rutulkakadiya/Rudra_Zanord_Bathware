@@ -414,9 +414,8 @@ export default function Products() {
                                 key={`${product.category}-${product.id}`}
                                 className={`group cursor-pointer transform transition-all duration-700`}
                                 onClick={() => openModal(product, index)}
-                                style={{
-                                    transitionDelay: `${index * 150}ms`,
-                                }}
+                                data-aos={window.innerWidth < 640 ? (index % 2 === 0 ? "fade-right" : "fade-left") : "fade"}
+                                data-aos-duration="1000"
                             >
                                 {/* Enhanced Product Card Container */}
                                 <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 hover:rotate-1">
