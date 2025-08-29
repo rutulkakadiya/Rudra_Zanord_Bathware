@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FolderTree, Plus, Edit, Trash2, X } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
 
-export default function SubcategoryContent() {
+export default function SubCategoryContent() {
 
     const [subcategories, setSubcategories] = useState([
     { parent: 'Electronics', sub: 'Smartphones' },

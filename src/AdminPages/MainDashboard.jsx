@@ -19,7 +19,7 @@ import AdminHeader from '../Components/Common Components/AdminHeader'
 import { DashboardContent } from './DashboardContent'
 import { SliderContent } from './SliderContent'
 import { CategoryContent } from './CategoryContent'
-import SubcategoryContent from './SubcategoryContent'
+import SubCategoryContent from './SubCategoryContent'
 import { ProductsContent } from './ProductsContent'
 import { EBrochureContent } from './EBrochureContent'
 import { GalleryContent } from './GalleryContent'
@@ -48,7 +48,7 @@ export default function Dashboard() {
       case 'category':
         return <CategoryContent />
       case 'subcategory':
-        return <SubcategoryContent />
+        return <SubCategoryContent />
       case 'products':
         return <ProductsContent />
       case 'ebrochure':
