@@ -22,7 +22,7 @@ export default function AdminLogin() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/dashboard")
+    navigate("/admin/dashboard")
     console.log("Login submitted:", formData);
     // Add login API call here
   };
