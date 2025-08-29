@@ -31,6 +31,7 @@ export default function Dashboard() {
 
   const sidebarItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    
     { id: 'slider', label: 'Slider', icon: Sliders },
     { id: 'category', label: 'Category', icon: Tags },
     { id: 'subcategory', label: 'Subcategory', icon: FolderTree },
