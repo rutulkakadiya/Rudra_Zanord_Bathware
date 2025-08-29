@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { FolderTree, Plus, Edit, Trash2, X } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
 
-export const SubcategoryContent = () => {
-  const [subcategories, setSubcategories] = useState([
+export default function SubcategoryContent() {
+
+    const [subcategories, setSubcategories] = useState([
     { parent: 'Electronics', sub: 'Smartphones' },
     { parent: 'Electronics', sub: 'Laptops' },
     { parent: 'Fashion', sub: "Men's Clothing" },
@@ -32,9 +33,8 @@ export const SubcategoryContent = () => {
     setShowModal(false)
     setNewSubcategory({ parent: 'Electronics', sub: '' })
   }
-
   return (
-    <div className="space-y-6">
+   <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className={`text-2xl font-extrabold tracking-tight ${isDarkMode ? 'text-white' : 'text-black'}`}>
           Subcategory Management

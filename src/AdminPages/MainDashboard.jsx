@@ -14,15 +14,15 @@ import {
   Sun,
   Moon
 } from 'lucide-react'
-import { useTheme } from '../contexts/ThemeContext.jsx'
-import AdminHeader from '../Components/Common Components/AdminHeader.jsx'
-import { DashboardContent } from './DashboardContent.jsx'
-import { SliderContent } from './SliderContent.jsx'
-import { CategoryContent } from './CategoryContent.jsx'
-import { SubcategoryContent } from './SubcategoryContent.jsx'
-import { ProductsContent } from './ProductsContent.jsx'
-import { EBrochureContent } from './EBrochureContent.jsx'
-import { GalleryContent } from './GalleryContent.jsx'
+import { useTheme } from '../contexts/ThemeContext'
+import AdminHeader from '../Components/Common Components/AdminHeader'
+import { DashboardContent } from './DashboardContent'
+import { SliderContent } from './SliderContent'
+import { CategoryContent } from './CategoryContent'
+import SubcategoryContent from './SubcategoryContent'
+import { ProductsContent } from './ProductsContent'
+import { EBrochureContent } from './EBrochureContent'
+import { GalleryContent } from './GalleryContent'
 
 export default function Dashboard() {
   const [activeSection, setActiveSection] = useState('dashboard')
