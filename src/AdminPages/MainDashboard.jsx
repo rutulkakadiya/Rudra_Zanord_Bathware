@@ -19,10 +19,10 @@ import AdminHeader from '../Components/Common Components/AdminHeader'
 import { DashboardContent } from './DashboardContent'
 import { SliderContent } from './SliderContent'
 import { CategoryContent } from './CategoryContent'
-import { SubCategoryContent } from './SubCategoryContent'
 import { ProductsContent } from './ProductsContent'
 import { EBrochureContent } from './EBrochureContent'
 import { GalleryContent } from './GalleryContent'
+import SubCatContent from './SubCatContent'
 
 export default function Dashboard() {
   const [activeSection, setActiveSection] = useState('dashboard')
@@ -37,7 +37,7 @@ export default function Dashboard() {
     { id: 'subcategory', label: 'Subcategory', icon: FolderTree },
     { id: 'products', label: 'Products', icon: FolderTree },
     { id: 'ebrochure', label: 'E-Brochure', icon: FileText },
-    
+
     { id: 'gallery', label: 'Gallery', icon: Image },
   ]
 
@@ -50,7 +50,7 @@ export default function Dashboard() {
       case 'category':
         return <CategoryContent />
       case 'subcategory':
-        return <SubCategoryContent />
+        return <SubCatContent />
       case 'products':
         return <ProductsContent />
       case 'ebrochure':
@@ -97,10 +97,10 @@ export default function Dashboard() {
                       setSidebarOpen(false)
                     }}
                     className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${activeSection === item.id
-                        ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                        : isDarkMode
-                          ? 'text-gray-300 hover:bg-gray-700 hover:text-white hover:shadow-md'
-                          : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900 hover:shadow-md'
+                      ? 'bg-blue-600 text-white shadow-lg transform scale-105'
+                      : isDarkMode
+                        ? 'text-gray-300 hover:bg-gray-700 hover:text-white hover:shadow-md'
+                        : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900 hover:shadow-md'
                       }`}
                   >
                     <Icon className="h-5 w-5" />
@@ -112,8 +112,8 @@ export default function Dashboard() {
 
             <div className={`mt-8 pt-8 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
               <button className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${isDarkMode
-                  ? 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                  : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                ? 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                 }`}>
                 <LogOut className="h-5 w-5" />
                 <span>Logout</span>
@@ -126,8 +126,8 @@ export default function Dashboard() {
                   <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
                     }`}>Theme</span>
                   <span className={`text-xs px-2 py-1 rounded-full ${isDarkMode
-                      ? 'bg-gray-600 text-gray-200'
-                      : 'bg-gray-200 text-gray-600'
+                    ? 'bg-gray-600 text-gray-200'
+                    : 'bg-gray-200 text-gray-600'
                     }`}>
                     {isDarkMode ? 'Dark' : 'Light'}
                   </span>
@@ -135,8 +135,8 @@ export default function Dashboard() {
                 <button
                   onClick={toggleTheme}
                   className={`w-full flex items-center justify-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${isDarkMode
-                      ? 'bg-gray-600 hover:bg-gray-500 text-gray-200'
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                    ? 'bg-gray-600 hover:bg-gray-500 text-gray-200'
+                    : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
                     }`}
                 >
                   {isDarkMode ? (
