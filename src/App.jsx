@@ -11,6 +11,7 @@ import Category from './Components/Products/Category';
 import Products from './Components/Products/Products';
 import SubCategory from './Components/Products/SubCategory';
 import ScrollToTop from './Components/Common Components/ScrollToTop';
+import AdminRoutes from './AdminRoutes';
 
 export default function App() {
   useEffect(() => {
@@ -32,6 +33,8 @@ export default function App() {
           <Route path='/contactUs' element={<ContactUs />}></Route>
           <Route path='/e-brochure' element={<EBrochure />}></Route>
           <Route path='/gallery' element={<Gallery />}></Route>
+
+          <Route path='/admin/*' element={<AdminRoutes />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

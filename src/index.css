@@ -10,9 +10,34 @@
 
 :root{
   --brand-color: #FDCB2E;
+  --admin-color: #FDCB2E;
   /* --heading-font: "DM Serif Display", serif; */
   --heading-font:  "Marcellus", serif;
   --text-font:  "Outfit", sans-serif;
+}
+
+/* Theme transition variables */
+:root {
+  --transition-duration: 0.3s;
+  --transition-timing: ease-in-out;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color var(--transition-duration) var(--transition-timing),
+              color var(--transition-duration) var(--transition-timing),
+              border-color var(--transition-duration) var(--transition-timing),
+              box-shadow var(--transition-duration) var(--transition-timing);
+}
+
+/* Dark mode specific styles */
+.dark {
+  color-scheme: dark;
+}
+
+/* Light mode specific styles */
+.light {
+  color-scheme: light;
 }
 
 
