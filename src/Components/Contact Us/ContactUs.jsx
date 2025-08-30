@@ -39,7 +39,7 @@ const ContactUs = () => {
         {
             icon: Phone,
             title: 'Phone',
-            info: '+91 12345 67890',
+            info: '+91 74054 68233',
             subInfo: 'Call Us Anytime'
         },
         {
@@ -57,8 +57,8 @@ const ContactUs = () => {
         {
             icon: Clock,
             title: 'Business Hours',
-            info: 'Mon - Sat: 10 AM - 8 PM',
-            subInfo: 'Sunday: 12 PM - 6 PM'
+            info: 'Mon - Sun: 8:30 AM - 8:30 PM',
+            subInfo: 'Wednesday Off'
         }
     ];
 

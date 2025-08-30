@@ -25,18 +25,18 @@ export default function Footer() {
 
     const footerLinks = {
         company: [
-            { name: 'Home', href: '#' },
-            { name: 'Company Profile', href: '#' },
-            { name: 'Products', href: '#' },
-            { name: 'Gallery', href: '#' },
-            { name: 'E-Brochure', href: '#' },
-            { name: 'Contact Us', href: '#' },
+            { name: 'Home', href: '/' },
+            { name: 'Company Profile', href: '/companyProfile' },
+            { name: 'Products', href: '/products' },
+            { name: 'Gallery', href: '/gallery' },
+            { name: 'E-Brochure', href: '/e-brochure' },
+            { name: 'Contact Us', href: '/contactUs' },
         ]
     };
 
     const socialLinks = [
-        { icon: <Facebook className="w-5 h-5" />, href: '#', label: 'Facebook', color: 'hover:bg-blue-600' },
-        { icon: <Instagram className="w-5 h-5" />, href: '#', label: 'Instagram', color: 'hover:bg-pink-600' },
+        { icon: <Facebook className="w-5 h-5" />, href: 'https://www.facebook.com/share/14EH7aoxuWT', label: 'Facebook', color: 'hover:bg-blue-600' },
+        { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/zanord_bath_accessories?igsh=b21va2hxeDB3c2x0', label: 'Instagram', color: 'hover:bg-pink-600' },
         { icon: <Twitter className="w-5 h-5" />, href: '#', label: 'Twitter', color: 'hover:bg-blue-400' },
         { icon: <Linkedin className="w-5 h-5" />, href: '#', label: 'LinkedIn', color: 'hover:bg-blue-700' }
     ];
@@ -101,7 +101,7 @@ export default function Footer() {
                                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FDCB2E] group-hover:w-full transition-all duration-500"></div>
                             </h3>
                             <div className="space-y-4">
-                                {[{ icon: Phone, text: '+91 12345 67890' },
+                                {[{ icon: Phone, text: '+91 74054 68233' },
                                 { icon: Mail, text: 'zanordbath@gmail.com' },
                                 { icon: MapPin, text: 'Rajkot, Gujarat' }].map((item, index) => (
                                     <div key={index} className="flex items-center space-x-3 group/item transform transition-all duration-300 hover:translate-x-2">
@@ -148,6 +148,7 @@ export default function Footer() {
                                     <a
                                         key={social.label}
                                         href={social.href}
+                                        target='_blank'
                                         className={`w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 ${social.color} shadow-lg hover:shadow-xl`}
                                         aria-label={social.label}
                                         style={{ animationDelay: `${index * 150}ms` }}

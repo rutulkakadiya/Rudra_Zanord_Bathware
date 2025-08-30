@@ -64,7 +64,7 @@ export default function Header() {
                 <div className="w-[90%] mx-auto flex justify-between items-center">
                     <div className="flex items-center gap-4">
                         <Phone size={14} />
-                        <span>+1 (555) 123-4567</span>
+                        <span>+91 74054 68233</span>
                     </div>
                     <div className="hidden md:flex items-center gap-2">
                         <Mail size={14} />
